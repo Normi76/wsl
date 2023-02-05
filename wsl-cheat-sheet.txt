@@ -17,7 +17,7 @@ Wie kann ich sehen, welche WSL Maschinen installiert sind.
 wsl --list --verbose
 
 NAME                   STATE           VERSION
-* Debian                 Running         2
+* Debian               Running         2
 kali-linux             Running         2
 docker-desktop         Running         2
 docker-desktop-data    Running         2
@@ -41,7 +41,7 @@ Run this on your windows host machine:
 netsh interface ip add address "vEthernet (WSL)" 192.168.100.1 255.255.255.0
 And this on your wsl linux machine:
 
-sudo ip addr add 192.168.100.2/24 broadcast 192.168.99.255 dev eth0 label eth0:1;
+sudo ip addr add 192.168.100.2/24 broadcast 192.168.100.255 dev eth0 label eth0:1;
 But to keep this IP after the rebooting your sytem you need to set up those commands in the startup scrip.
 
 
