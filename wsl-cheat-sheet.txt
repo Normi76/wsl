@@ -1,0 +1,48 @@
+Sie können eine Debian-Maschine mit WSL starten, 
+indem Sie die Debian-Distribution aus dem Microsoft Store herunterladen und installieren. Sobald die Installation abgeschlossen ist, 
+können Sie eine Command Line Interface (CLI) starten und den Befehl "wsl" ausführen, gefolgt von dem Namen der Debian-Distribution,
+um eine Debian-Maschine zu starten. Hier ist ein Beispiel:
+wsl -d Debian
+
+
+Wie starte ich WSL Kali Linux
+Kali Linux
+wsl -d kali-linux
+Auf der Kali CLI
+kex -s
+Danach wird Tight VNC gestartet. Mit F8 kann man die Fullscreen bearbeiten.
+
+
+Wie kann ich sehen, welche WSL Maschinen installiert sind.
+wsl --list --verbose
+
+NAME                   STATE           VERSION
+* Debian                 Running         2
+kali-linux             Running         2
+docker-desktop         Running         2
+docker-desktop-data    Running         2
+
+
+Wie kann ich die WSL neustarten?
+wsl --shutdown
+Auf der CLI WSL eingeben, dann startet das Windows Subsystem Linux wieder.
+wsl 
+
+
+Wie kann ich die WSL Version auf die Version 2 als Standard setzen
+wsl --set-default-version 2
+
+Wie kann ich eine statische IP Adresse in WSL zuordnen.
+WSL Statische IP Adresse
+
+Powershell CLI 
+Run this on your windows host machine:
+
+netsh interface ip add address "vEthernet (WSL)" 192.168.100.1 255.255.255.0
+And this on your wsl linux machine:
+
+sudo ip addr add 192.168.100.2/24 broadcast 192.168.99.255 dev eth0 label eth0:1;
+But to keep this IP after the rebooting your sytem you need to set up those commands in the startup scrip.
+
+
+Dies ist ein Test
