@@ -43,6 +43,3 @@ And this on your wsl linux machine:
 
 sudo ip addr add 192.168.100.2/24 broadcast 192.168.100.255 dev eth0 label eth0:1;
 But to keep this IP after the rebooting your sytem you need to set up those commands in the startup scrip.
-
-
-Dies ist ein Test
